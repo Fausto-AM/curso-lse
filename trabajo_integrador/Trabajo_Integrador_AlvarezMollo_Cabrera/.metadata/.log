@@ -1,0 +1,1043 @@
+!SESSION 2024-11-13 13:01:52.030 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_419
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2024-11-13 13:02:07.679
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-13 13:02:14.864
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Martin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2024-11-13 13:02:15.769
+!MESSAGE The device 'LPC845' (version='1.0.0') from SDK 'SDK_2.x_LPC845BREAKOUT' (version='2.16.000', build='epluginsite808 2024-07-15') will be installed.
+
+!ENTRY com.crt.log 4 -1 2024-11-13 13:02:32.544
+!MESSAGE Unable to connect to repository https://mcuxpresso.nxp.com/eclipse/sdk/artifacts.xml
+!STACK 0
+java.lang.Exception: org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository https://mcuxpresso.nxp.com/eclipse/sdk/artifacts.xml
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:278)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository https://mcuxpresso.nxp.com/eclipse/sdk/artifacts.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:250)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:68)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:205)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.refreshRepository(ArtifactRepositoryManager.java:136)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:179)
+	... 1 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1055)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:378)
+	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:128)
+	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:93)
+	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:343)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:475)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 21 more
+!SESSION 2024-11-13 13:03:32.286 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_419
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-13 13:03:57.161
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Martin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2024-11-13 13:20:44.505
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository https://mcuxpresso.nxp.com/eclipse/sdk/2.10.0/artifacts.xml.xz
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.getLocalFile(XZedSimpleArtifactRepositoryFactory.java:65)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.load(XZedSimpleArtifactRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.load(XZedSimpleArtifactRepositoryFactory.java:42)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:476)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:157)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:79)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:205)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.refreshRepository(ArtifactRepositoryManager.java:136)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:179)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1055)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:378)
+	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:128)
+	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:93)
+	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:343)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:475)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 21 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2024-11-13 13:20:44.507
+!MESSAGE Unable to connect to repository https://mcuxpresso.nxp.com/eclipse/sdk/2.10.0/artifacts.xml.xz
+!STACK 0
+java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1055)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:378)
+	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:128)
+	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:93)
+	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:343)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:475)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 21 more
+
+!ENTRY com.crt.log 4 -1 2024-11-13 13:20:44.515
+!MESSAGE Unable to read repository at https://mcuxpresso.nxp.com/eclipse/sdk.
+!STACK 0
+java.lang.Exception: org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://mcuxpresso.nxp.com/eclipse/sdk.
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:278)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://mcuxpresso.nxp.com/eclipse/sdk.
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:167)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:79)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:205)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.refreshRepository(ArtifactRepositoryManager.java:136)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:179)
+	... 1 more
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository https://mcuxpresso.nxp.com/eclipse/sdk/2.10.0/artifacts.xml.xz
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.getLocalFile(XZedSimpleArtifactRepositoryFactory.java:65)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.load(XZedSimpleArtifactRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.load(XZedSimpleArtifactRepositoryFactory.java:42)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:476)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:157)
+	... 9 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1055)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
+	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:378)
+	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:128)
+	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:93)
+	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:343)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:475)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:380)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:372)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 21 more
+!SESSION 2024-11-25 17:02:53.311 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_419
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-25 17:03:51.377
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Martin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-25 17:07:42.591
+!MESSAGE Indexed 'Proyecto_Integrador_Cabrera_Alvarez-Mollo' (24 sources, 30 headers) in 5.1 sec: 3,910 declarations; 9,022 references; 28 unresolved inclusions; 44 syntax errors; 2,195 unresolved names (15 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-25 17:16:02.523
+!MESSAGE Indexed 'freertos' (9 sources, 47 headers) in 2.09 sec: 2,608 declarations; 10,933 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2024-11-27 08:44:08.924 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_419
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-27 08:45:04.393
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Martin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2024-11-27 08:49:39.992
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 08:49:40.026
+!MESSAGE RedlinkServer telnet session connected on port 3025->57780 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 08:50:07.563
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57788, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 08:50:10.619
+!MESSAGE Telnet session connected on port 3330->57809 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 08:56:23.283
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@d2cb24): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 08:56:23.283
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.log 1 0 2024-11-27 08:58:16.879
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 08:58:17.926
+!MESSAGE RedlinkServer telnet session connected on port 3025->57864 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 08:58:18.560
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57865, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 08:58:20.851
+!MESSAGE Telnet session connected on port 3330->57876 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:06:04.549
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:06:05.593
+!MESSAGE RedlinkServer telnet session connected on port 3025->57924 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:06:06.320
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57925, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:06:08.799
+!MESSAGE Telnet session connected on port 3330->57937 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:07:24.288
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:07:25.306
+!MESSAGE RedlinkServer telnet session connected on port 3025->57943 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:07:25.974
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57944, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:07:28.288
+!MESSAGE Telnet session connected on port 3330->57955 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:11:09.348
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:11:10.374
+!MESSAGE RedlinkServer telnet session connected on port 3025->58010 @ 127.0.0.1
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-11-27 09:11:10.400
+!MESSAGE An internal error occurred during: "Suspend monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@a278a7[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@143f4f22[Wrapped task = org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$MonitorSuspendJob$2@4e4cd6b5]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@3e57acdf[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 8892]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:340)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:562)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:450)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:715)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:482)
+	at org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$MonitorSuspendJob.run(GDBRunControl_7_0_NS.java:695)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:11:11.132
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58011, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:11:13.524
+!MESSAGE Telnet session connected on port 3330->58021 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:14:35.232
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:14:36.247
+!MESSAGE RedlinkServer telnet session connected on port 3025->58043 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:14:36.947
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58044, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:14:39.270
+!MESSAGE Telnet session connected on port 3330->58055 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 09:15:02.415
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 09:15:02.415
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 09:15:02.416
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 09:15:02.416
+!MESSAGE Debugging context: Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:15:05.145
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@14b83a6e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:15:05.146
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:15:05.970
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@78613e09): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-11-27 09:15:05.970
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:15:06.586
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:15:07.593
+!MESSAGE RedlinkServer telnet session connected on port 3025->58057 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:15:57.497
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:15:58.505
+!MESSAGE RedlinkServer telnet session connected on port 3025->58066 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:15:59.262
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58067, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:16:01.543
+!MESSAGE Telnet session connected on port 3330->58078 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:16:28.285
+!MESSAGE Request for monitor: '78^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:16:28.285
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x1000104c 32
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:16:49.597
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:16:50.610
+!MESSAGE RedlinkServer telnet session connected on port 3025->58086 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:16:51.323
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58087, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:16:53.635
+!MESSAGE Telnet session connected on port 3330->58098 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:18:00.796
+!MESSAGE Request for monitor: '79^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:18:00.796
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x1000104c 32
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:18:15.517
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:18:16.536
+!MESSAGE RedlinkServer telnet session connected on port 3025->58106 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:18:17.433
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58107, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:18:19.888
+!MESSAGE Telnet session connected on port 3330->58119 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:20:51.980
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:20:52.999
+!MESSAGE RedlinkServer telnet session connected on port 3025->58155 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:20:53.648
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58156, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:20:56.175
+!MESSAGE Telnet session connected on port 3330->58168 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:26:11.988
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:26:13.003
+!MESSAGE RedlinkServer telnet session connected on port 3025->58179 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:26:13.811
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58180, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:26:16.144
+!MESSAGE Telnet session connected on port 3330->58191 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:34:06.862
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:34:07.893
+!MESSAGE RedlinkServer telnet session connected on port 3025->58214 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:34:08.580
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58215, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:34:11.043
+!MESSAGE Telnet session connected on port 3330->58227 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:41:49.422
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:41:50.444
+!MESSAGE RedlinkServer telnet session connected on port 3025->58343 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:41:51.092
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58344, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:41:53.630
+!MESSAGE Telnet session connected on port 3330->58356 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:43:40.570
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:43:41.581
+!MESSAGE RedlinkServer telnet session connected on port 3025->58371 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:43:42.180
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58372, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:43:44.649
+!MESSAGE Telnet session connected on port 3330->58385 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:44:16.470
+!MESSAGE Request for monitor: '78^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:44:16.470
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x1000104c 32
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:45:03.051
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:45:04.063
+!MESSAGE RedlinkServer telnet session connected on port 3025->58394 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:45:04.895
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58395, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:45:07.578
+!MESSAGE Telnet session connected on port 3330->58410 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:46:22.454
+!MESSAGE Request for monitor: '76^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:46:22.455
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x1000104c 32
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:48:00.918
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:48:01.940
+!MESSAGE RedlinkServer telnet session connected on port 3025->58423 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:48:02.857
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58424, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:48:05.301
+!MESSAGE Telnet session connected on port 3330->58436 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:48:53.178
+!MESSAGE Request for monitor: '86^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:48:53.178
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x0 0
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:49:07.064
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:49:08.072
+!MESSAGE RedlinkServer telnet session connected on port 3025->58442 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:49:08.665
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58443, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:49:11.108
+!MESSAGE Telnet session connected on port 3330->58455 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:51:17.140
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:51:18.151
+!MESSAGE RedlinkServer telnet session connected on port 3025->58474 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:51:18.656
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58475, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-11-27 09:51:18.893
+!MESSAGE An internal error occurred during: "Suspend monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@7512b2c9[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3ef5887e[Wrapped task = org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$MonitorSuspendJob$2@5350eded]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@4187a39c[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3163]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:340)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:562)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:450)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:715)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:482)
+	at org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$MonitorSuspendJob.run(GDBRunControl_7_0_NS.java:695)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:51:21.146
+!MESSAGE Telnet session connected on port 3330->58487 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:52:44.188
+!MESSAGE Request for monitor: '104^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:52:44.188
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x1000104c 32
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:52:53.411
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:52:54.420
+!MESSAGE RedlinkServer telnet session connected on port 3025->58499 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:52:54.999
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58500, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:52:57.515
+!MESSAGE Telnet session connected on port 3330->58512 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:53:15.762
+!MESSAGE Request for monitor: '87^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:53:15.762
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x0 0
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:54:25.397
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:54:26.404
+!MESSAGE RedlinkServer telnet session connected on port 3025->58515 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:54:26.896
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58516, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:54:29.368
+!MESSAGE Telnet session connected on port 3330->58528 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 09:59:28.181
+!MESSAGE Request for monitor: '88^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 09:59:28.181
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x0 0
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:59:38.471
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 09:59:39.488
+!MESSAGE RedlinkServer telnet session connected on port 3025->58568 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 09:59:40.224
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58569, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 09:59:42.545
+!MESSAGE Telnet session connected on port 3330->58580 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:00:30.583
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:00:31.592
+!MESSAGE RedlinkServer telnet session connected on port 3025->58582 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:00:32.089
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58583, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:00:34.399
+!MESSAGE Telnet session connected on port 3330->58594 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 10:00:55.472
+!MESSAGE Request for monitor: '84^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 10:00:55.472
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x0 0
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:01:48.437
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:01:49.446
+!MESSAGE RedlinkServer telnet session connected on port 3025->58600 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:01:49.937
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58601, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:01:52.247
+!MESSAGE Telnet session connected on port 3330->58612 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:08:36.520
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:08:37.535
+!MESSAGE RedlinkServer telnet session connected on port 3025->58637 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:08:38.264
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58638, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:08:40.495
+!MESSAGE Telnet session connected on port 3330->58649 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:10:43.570
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:10:44.579
+!MESSAGE RedlinkServer telnet session connected on port 3025->58679 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:10:45.271
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58680, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:10:47.709
+!MESSAGE Telnet session connected on port 3330->58692 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-11-27 10:12:10.321
+!MESSAGE There is already a running debug session for the launch configuration 'Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:12:13.226
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:12:14.248
+!MESSAGE RedlinkServer telnet session connected on port 3025->58701 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:12:15.385
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58702, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:12:17.778
+!MESSAGE Telnet session connected on port 3330->58712 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:13:43.216
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:13:44.239
+!MESSAGE RedlinkServer telnet session connected on port 3025->58721 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:13:44.946
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58722, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:13:47.453
+!MESSAGE Telnet session connected on port 3330->58734 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 10:14:48.386
+!MESSAGE Request for monitor: '103^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 10:14:48.386
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x0 0
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:16:45.426
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:16:46.454
+!MESSAGE RedlinkServer telnet session connected on port 3025->58745 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:16:47.411
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58746, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:16:49.658
+!MESSAGE Telnet session connected on port 3330->58757 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-11-27 10:18:04.371
+!MESSAGE There is already a running debug session for the launch configuration 'Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 10:18:07.962
+!MESSAGE Request for monitor: '72^error,msg="Invalid thread id: 1"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 10:18:07.962
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x1000104c 32
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 10:18:09.736
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@32516701): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@724397d1): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@6ea93068): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@724397d1): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2024-11-27 10:18:09.736
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@724397d1): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2024-11-27 10:18:09.736
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@6ea93068): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@724397d1): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 10:18:09.742
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2024-11-27 10:18:09.742
+!MESSAGE Service is not available.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2024-11-27 10:18:09.742
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@529aa2b6): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Service is not available.' resulted in a rejected execution exception.
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:18:14.597
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58768, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:18:17.051
+!MESSAGE Telnet session connected on port 3330->58780 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:20:39.605
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:20:40.612
+!MESSAGE RedlinkServer telnet session connected on port 3025->58789 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:20:41.120
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58790, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:20:43.396
+!MESSAGE Telnet session connected on port 3330->58801 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:41:40.613
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:41:41.655
+!MESSAGE RedlinkServer telnet session connected on port 3025->59043 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:41:42.177
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59044, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:41:44.711
+!MESSAGE Telnet session connected on port 3330->59056 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:43:16.817
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:43:17.841
+!MESSAGE RedlinkServer telnet session connected on port 3025->59064 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:43:18.604
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59065, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:43:21.142
+!MESSAGE Telnet session connected on port 3330->59077 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:44:41.457
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:44:42.463
+!MESSAGE RedlinkServer telnet session connected on port 3025->59080 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:44:42.948
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59081, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:44:45.432
+!MESSAGE Telnet session connected on port 3330->59093 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-11-27 10:47:17.772
+!MESSAGE There is already a running debug session for the launch configuration 'Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:47:28.135
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:47:29.182
+!MESSAGE RedlinkServer telnet session connected on port 3025->59128 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:47:30.012
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59129, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:47:32.499
+!MESSAGE Telnet session connected on port 3330->59141 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-11-27 10:48:07.107
+!MESSAGE There is already a running debug session for the launch configuration 'Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:50:13.724
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:50:14.737
+!MESSAGE RedlinkServer telnet session connected on port 3025->59160 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:50:15.626
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59161, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:50:17.983
+!MESSAGE Telnet session connected on port 3330->59172 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:51:52.048
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:51:53.074
+!MESSAGE RedlinkServer telnet session connected on port 3025->59190 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:51:53.815
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59191, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:51:56.089
+!MESSAGE Telnet session connected on port 3330->59202 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:55:07.624
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 10:55:08.631
+!MESSAGE RedlinkServer telnet session connected on port 3025->59223 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 10:55:09.268
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59224, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 10:55:11.802
+!MESSAGE Telnet session connected on port 3330->59236 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:05:17.750
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 15:05:18.849
+!MESSAGE RedlinkServer telnet session connected on port 3025->55830 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:05:19.923
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=55831, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 15:05:22.580
+!MESSAGE Telnet session connected on port 3330->55843 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:05:58.721
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 15:05:59.738
+!MESSAGE RedlinkServer telnet session connected on port 3025->55857 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:06:00.700
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=55858, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 15:06:03.003
+!MESSAGE Telnet session connected on port 3330->55869 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 15:07:21.479
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 15:07:21.479
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 15:07:21.479
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-11-27 15:07:21.479
+!MESSAGE Debugging context: Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 15:07:23.674
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1e8590c0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-11-27 15:07:23.674
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 15:07:24.653
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@58241cfe): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-11-27 15:07:24.653
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:07:25.349
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 15:07:26.378
+!MESSAGE RedlinkServer telnet session connected on port 3025->55890 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-27 15:07:26.386
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@66e371a6): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Given context: (gdb[38].proc[42000].threadGroup[i1],gdb[38].proc[42000].OSthread[1]).thread[1], is already suspended.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2024-11-27 15:07:26.386
+!MESSAGE Given context: (gdb[38].proc[42000].threadGroup[i1],gdb[38].proc[42000].OSthread[1]).thread[1], is already suspended.
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:18:25.173
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 15:18:26.212
+!MESSAGE RedlinkServer telnet session connected on port 3025->56112 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:18:26.560
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=56113, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 15:18:29.047
+!MESSAGE Telnet session connected on port 3330->56125 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-11-27 15:18:40.730
+!MESSAGE There is already a running debug session for the launch configuration 'Proyecto_Integrador_Cabrera_Alvarez-Mollo LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:21:04.682
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 15:21:05.718
+!MESSAGE RedlinkServer telnet session connected on port 3025->56157 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:21:06.645
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=56159, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 15:21:09.148
+!MESSAGE Telnet session connected on port 3330->56171 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:22:39.407
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-11-27 15:22:40.424
+!MESSAGE RedlinkServer telnet session connected on port 3025->56195 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-11-27 15:22:41.363
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=56196, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/Proyecto_Integrador_Cabrera_Alvarez-Mollo/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/Martin/Desktop/Curso UTN Fabri/integrador/99_freertos_integrador/src/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-11-27 15:22:43.706
+!MESSAGE Telnet session connected on port 3330->56207 @ 127.0.0.1

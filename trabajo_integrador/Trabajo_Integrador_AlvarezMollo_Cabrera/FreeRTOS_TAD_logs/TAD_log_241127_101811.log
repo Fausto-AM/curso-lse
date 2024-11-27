@@ -1,0 +1,51 @@
+"Task Aware Debugger for GDB" version 11.10.0 (202404041456)
+Copyright 2016-2023 NXP
+==================================
+10:16:39.169 INFO: [TadModel] DSF session ID 31 has started.
+10:16:49.932 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+10:16:49.953 INFO: [TadState] TAD state changed: DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+10:16:50.636 INFO: [TadState] TAD state changed: DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+10:16:50.716 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+10:16:54.431 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+10:18:07.585 INFO: [TadState] TAD state changed: DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+10:18:07.667 INFO: [Benchmark] Loading data for "Determine RTOS version" has started.
+10:18:07.675 ERROR: [VariableReader] Could not read variable expression: "&(FreeRTOSDebugConfig)".
+10:18:07.675 ERROR: [VariableReader] Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+10:18:07.675 ERROR: [VariableReader] -data-evaluate-expression &(FreeRTOSDebugConfig)
+10:18:07.676 ERROR: [VariableReader] Error message from debugger back end:
+10:18:07.676 ERROR: [VariableReader] No symbol "FreeRTOSDebugConfig" in current context. java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+10:18:07.690 ERROR: [VariableReader] Could not read variable expression: "sizeof(struct TaskControlBlock_t)".
+10:18:07.690 ERROR: [VariableReader] Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+10:18:07.690 ERROR: [VariableReader] -data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+10:18:07.690 ERROR: [VariableReader] Error message from debugger back end:
+10:18:07.691 ERROR: [VariableReader] No struct type named TaskControlBlock_t. java.lang.Exception: No struct type named TaskControlBlock_t.
+10:18:07.731 ERROR: [VariableReader] Could not read variable expression: "&(((struct QueueDefinition *) 0)->pcTail)".
+10:18:07.731 ERROR: [VariableReader] Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+10:18:07.732 ERROR: [VariableReader] -data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+10:18:07.732 ERROR: [VariableReader] Error message from debugger back end:
+10:18:07.732 ERROR: [VariableReader] There is no member named pcTail. java.lang.Exception: There is no member named pcTail.
+10:18:07.732 INFO: [FreeRtosTadModel] FreeRTOS version has been identified from available FreeRTOS symbols as 10.11.
+10:18:07.732 INFO: [Benchmark] Loading data for "Determine RTOS version" took 65 ms.
+10:18:07.732 INFO: [Benchmark] Loading data for "Task List" has started.
+10:18:07.863 ERROR: [VariableReader] Could not read variable expression: "ulTotalRunTime[0]".
+10:18:07.863 ERROR: [VariableReader] Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+10:18:07.863 ERROR: [VariableReader] -data-evaluate-expression ulTotalRunTime[0]
+10:18:07.863 ERROR: [VariableReader] Error message from debugger back end:
+10:18:07.863 ERROR: [VariableReader] No symbol "ulTotalRunTime" in current context. java.lang.Exception: No symbol "ulTotalRunTime" in current context.
+10:18:07.864 ERROR: [TaskFactory] ulTotalRunTime not available
+10:18:09.752 INFO: [TadModel] DSF session ID 31 has ended.
+10:18:11.959 ERROR: [MemoryReader] Read bytes method timed out!
+10:18:11.959 INFO: [FreeRTOS] RTOS macro "configUSE_MUTEXES" is disabled.
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[2]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[3]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[4]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[5]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[6]".
+10:18:11.960 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[7]".
+10:18:11.961 ERROR: [TaskFactory] Cannot read information from "xSuspendedTaskList".
+10:18:11.961 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+10:18:11.961 ERROR: [TaskFactory] Cannot read information from "pxOverflowDelayedTaskList".
+10:18:11.961 ERROR: [TaskFactory] Cannot read information from "xPendingReadyList".
+10:18:11.961 INFO: [Benchmark] Loading data for "Task List" took 4229 ms.

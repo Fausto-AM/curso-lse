@@ -1,0 +1,19 @@
+10:54:59 **** Incremental Build of configuration Debug for project freertos ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "libfreertos.a" ; # arm-none-eabi-objdump -h -S "libfreertos.a" >"libfreertos.lss"
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	croutine.o (ex libfreertos.a)
+   1278	      0	      0	   1278	    4fe	event_groups.o (ex libfreertos.a)
+    702	      4	   4116	   4822	   12d6	heap_2.o (ex libfreertos.a)
+    338	      0	      0	    338	    152	list.o (ex libfreertos.a)
+   1098	      4	     12	   1114	    45a	port.o (ex libfreertos.a)
+   4570	      0	     64	   4634	   121a	queue.o (ex libfreertos.a)
+   2810	      0	      0	   2810	    afa	stream_buffer.o (ex libfreertos.a)
+  10495	      0	    320	  10815	   2a3f	tasks.o (ex libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex libfreertos.a)
+ 
+
+10:54:59 Build Finished. 0 errors, 0 warnings. (took 281ms)
+

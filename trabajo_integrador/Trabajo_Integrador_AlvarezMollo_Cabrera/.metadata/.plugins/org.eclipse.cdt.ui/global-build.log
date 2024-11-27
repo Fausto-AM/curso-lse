@@ -1,0 +1,150 @@
+10:54:59 **** Incremental Build of configuration Debug for project freertos ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "libfreertos.a" ; # arm-none-eabi-objdump -h -S "libfreertos.a" >"libfreertos.lss"
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	croutine.o (ex libfreertos.a)
+   1278	      0	      0	   1278	    4fe	event_groups.o (ex libfreertos.a)
+    702	      4	   4116	   4822	   12d6	heap_2.o (ex libfreertos.a)
+    338	      0	      0	    338	    152	list.o (ex libfreertos.a)
+   1098	      4	     12	   1114	    45a	port.o (ex libfreertos.a)
+   4570	      0	     64	   4634	   121a	queue.o (ex libfreertos.a)
+   2810	      0	      0	   2810	    afa	stream_buffer.o (ex libfreertos.a)
+  10495	      0	    320	  10815	   2a3f	tasks.o (ex libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex libfreertos.a)
+ 
+10:55:00 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+Building file: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\board" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\source" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\component\uart" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\CMSIS" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\device" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\utilities" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -o "source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" "../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c"
+Finished building: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+ 
+Building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="Proyecto_Integrador_Cabrera_Alvarez-Mollo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T Proyecto_Integrador_Cabrera_Alvarez-Mollo_Debug.ld -o "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o ./source/mtb.o ./source/semihost_hardfault.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31484 B        64 KB     48.04%
+            SRAM:        6944 B      16352 B     42.47%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31472	     12	   6932	  38416	   9610	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+10:55:05 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31472	     12	   6932	  38416	   9610	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+15:05:06 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+Building file: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\board" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\source" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\component\uart" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\CMSIS" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\device" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\utilities" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -o "source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" "../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c"
+Finished building: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+ 
+Building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="Proyecto_Integrador_Cabrera_Alvarez-Mollo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T Proyecto_Integrador_Cabrera_Alvarez-Mollo_Debug.ld -o "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o ./source/mtb.o ./source/semihost_hardfault.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31856 B        64 KB     48.61%
+            SRAM:        6944 B      16352 B     42.47%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31844	     12	   6932	  38788	   9784	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+15:05:55 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+Building file: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\board" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\source" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\component\uart" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\CMSIS" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\device" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\utilities" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -o "source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" "../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c"
+Finished building: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+ 
+Building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="Proyecto_Integrador_Cabrera_Alvarez-Mollo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T Proyecto_Integrador_Cabrera_Alvarez-Mollo_Debug.ld -o "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o ./source/mtb.o ./source/semihost_hardfault.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31824 B        64 KB     48.56%
+            SRAM:        6944 B      16352 B     42.47%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31812	     12	   6932	  38756	   9764	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+15:18:20 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+Building file: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\board" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\source" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\component\uart" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\CMSIS" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\device" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\utilities" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -o "source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" "../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c"
+Finished building: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+ 
+Building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="Proyecto_Integrador_Cabrera_Alvarez-Mollo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T Proyecto_Integrador_Cabrera_Alvarez-Mollo_Debug.ld -o "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o ./source/mtb.o ./source/semihost_hardfault.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31840 B        64 KB     48.58%
+            SRAM:        6944 B      16352 B     42.47%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31828	     12	   6932	  38772	   9774	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+15:20:59 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+Building file: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\board" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\source" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\component\uart" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\CMSIS" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\device" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\utilities" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -o "source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" "../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c"
+Finished building: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+ 
+Building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="Proyecto_Integrador_Cabrera_Alvarez-Mollo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T Proyecto_Integrador_Cabrera_Alvarez-Mollo_Debug.ld -o "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o ./source/mtb.o ./source/semihost_hardfault.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31852 B        64 KB     48.60%
+            SRAM:        6944 B      16352 B     42.47%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31840	     12	   6932	  38784	   9780	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+15:22:35 **** Incremental Build of configuration Debug for project Proyecto_Integrador_Cabrera_Alvarez-Mollo ****
+make -r -j4 all 
+Building file: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\board" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\source" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\component\uart" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\CMSIS" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\device" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\utilities" -I"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" -MT"source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.d" -o "source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o" "../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c"
+Finished building: ../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c
+ 
+Building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Martin\Desktop\Curso UTN Fabri\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="Proyecto_Integrador_Cabrera_Alvarez-Mollo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T Proyecto_Integrador_Cabrera_Alvarez-Mollo_Debug.ld -o "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.o ./source/mtb.o ./source/semihost_hardfault.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31852 B        64 KB     48.60%
+            SRAM:        6944 B      16352 B     42.47%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf"; # arm-none-eabi-objcopy -v -O binary "Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf" "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin" ; # checksum -p LPC845 -d "Proyecto_Integrador_Cabrera_Alvarez-Mollo.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31840	     12	   6932	  38784	   9780	Proyecto_Integrador_Cabrera_Alvarez-Mollo.axf
+ 

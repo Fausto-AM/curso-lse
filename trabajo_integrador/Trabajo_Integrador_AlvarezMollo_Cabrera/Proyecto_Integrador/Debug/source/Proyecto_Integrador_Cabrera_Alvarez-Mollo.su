@@ -1,0 +1,29 @@
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_clock.h:558:20:CLOCK_EnableClock	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_clock.h:569:20:CLOCK_DisableClock	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_clock.h:580:20:CLOCK_Select	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_clock.h:591:20:CLOCK_SetClkDivider	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_clock.h:601:24:CLOCK_GetClkDivider	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_gpio.h:153:20:GPIO_PinWrite	24	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_gpio.h:172:24:GPIO_PinRead	24	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_sctimer.h:503:20:SCTIMER_StartTimer	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_adc.h:456:20:ADC_EnableConvSeqA	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_adc.h:481:20:ADC_DoSoftwareTriggerConvSeqA	16	static
+C:\Users\Martin\Desktop\Curso UTN Fabri\integrador\99_freertos_integrador\src\Proyecto_Integrador_Cabrera_Alvarez-Mollo\drivers/fsl_power.h:153:20:POWER_DisablePD	16	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:76:5:main	16	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:150:6:task_button	24	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:171:6:task_display	40	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:221:6:task_measure_light	40	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:243:6:task_change_setpoint	24	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:270:6:task_print_information	48	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:309:6:task_change_blue_led_intensity	48	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:328:6:project_init	8	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:337:6:i2c_init	24	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:372:6:adc_init	48	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:414:6:display_init	56	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:427:6:buttons_init	16	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:438:6:pwm_init	48	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:474:6:display_write	72	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:487:6:display_off	8	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:493:6:display_on	16	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:498:6:display_segments_off	16	static
+../source/Proyecto_Integrador_Cabrera_Alvarez-Mollo.c:506:6:display_segment_on	16	static
